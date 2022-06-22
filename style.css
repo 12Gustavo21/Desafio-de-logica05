@@ -43,23 +43,19 @@ button:active {
 
 @keyframes girar {
     0% {
-        transform: translateX(0vw) rotate(0deg);
+        transform: rotate(0deg);
     }
-
     25% {
-        transform: translateX(1vw) rotate(90deg);
+        transform: rotate(90deg);
     }
-
     50% {
-        transform: translateX(2vw) rotate(180deg);
+        transform: rotate(180deg);
     }
-
     75% {
-        transform: translateX(3vw) rotate(270deg);
+        transform: rotate(270deg);
     }
-
     100% {
-        transform: translateX(4vw) rotate(360deg);
+        transform: rotate(360deg);
     }
 }
 
