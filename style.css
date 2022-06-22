@@ -1,0 +1,139 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: rgb(163, 224, 176);
+}
+
+h1 {
+    font-size: 3vw;
+    margin: 1vw 0 3vw;
+}
+
+img {
+    margin: 2vw 0 2vw;
+    width: 25vw;
+    animation: girar 2s ease-out alternate infinite;
+    filter: drop-shadow(.5vw .5vw 0 rgb(235, 0, 0));
+    box-shadow: inset 20vw 0vw 0vw 0px rgb(21, 255, 255);
+}
+
+button {
+    font-size: 2vw;
+    cursor: pointer;
+    margin-top: 4vw;
+    padding: 1vw;
+    background-color: rgb(28, 216, 223);
+    box-shadow: rgb(0, 89, 255) .5vw .5vw 0;
+    border-radius: 1vw;
+    transition: 300ms all;
+}
+
+button:active {
+    transform: translateY(.5vw) translateX(.5vw);
+    box-shadow: rgb(0, 89, 255) 0 0 0;
+}
+
+@keyframes girar {
+    0% {
+        transform: translateX(0vw) rotate(0deg);
+    }
+
+    25% {
+        transform: translateX(1vw) rotate(90deg);
+    }
+
+    50% {
+        transform: translateX(2vw) rotate(180deg);
+    }
+
+    75% {
+        transform: translateX(3vw) rotate(270deg);
+    }
+
+    100% {
+        transform: translateX(4vw) rotate(360deg);
+    }
+}
+
+@keyframes float {
+    0% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-3vw);
+    }
+
+    100% {
+        transform: translateY(0);
+    }
+}
+
+@media(max-width: 768px) {
+    h1 {
+        font-size: 4vw;
+    }
+
+    img {
+        width: 30vw;
+    }
+
+    button {
+        font-size: 2.5vw;
+    }
+}
+
+@media(max-width: 425px) {
+    h1 {
+        font-size: 5vw;
+    }
+
+    img {
+        animation: float 2s ease-out alternate infinite;
+        filter: drop-shadow(.5vw .5vw 1vw rgb(235, 0, 0));
+        margin: 3vw;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        width: 40vw;
+        box-shadow: none;
+    }
+
+    button {
+        font-size: 3vw;
+    }
+}
+
+@media(max-width: 375px) {
+    h1 {
+        font-size: 7vw;
+    }
+
+    img {
+
+        margin: 2vw;
+        width: 50vw;
+    }
+
+    button {
+        font-size: 4vw;
+    }
+}
+
+@media(max-width: 320px) {
+    h1 {
+        font-size: 8vw;
+    }
+
+    button {
+        font-size: 5vw;
+    }
+}
